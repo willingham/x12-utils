@@ -1,4 +1,4 @@
-# X12 Validator
+# X12 Utils
 ## Validate x12 in other projects
 This project is a light wrapper around @azoner's [pyx12](https://github.com/azoner/pyx12)
 
