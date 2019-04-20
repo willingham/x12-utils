@@ -2,3 +2,5 @@
 .mypy_cache
 */**.pyc
 __pycache__
+pip-wheel-metadata
+x12_utils.egg-info
