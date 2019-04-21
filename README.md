@@ -68,3 +68,5 @@ result = x12_validate(
 
 ```
 
+## Documentation
+Just read the code.  The docstrings explain it.
