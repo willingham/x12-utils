@@ -1,11 +1,12 @@
 from typing import List, IO, Tuple, Union
 
+
 def x12_generate(
     src: List[Tuple[str, Union[List[str], None]]],
     output_file: Union[IO[str], None] = None,
     element_separator: str = "*",
     segment_separator: str = "~",
-    sub_element_separator: str = ":"
+    sub_element_separator: str = ":",
 ):
     """
     Generates edi based on input in list format

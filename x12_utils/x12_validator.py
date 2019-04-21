@@ -6,10 +6,10 @@ from typing import Any, Dict, IO, Union
 
 def x12_validate(
     src: Union[str, IO[str]],
-    params: Union[Any, None]=None,
+    params: Union[Any, None] = None,
     generate_html: bool = False,
     generate_997: bool = False,
-    generate_xml: bool = False
+    generate_xml: bool = False,
 ) -> Dict[str, Union[str, bool, list]]:
     """
     Validate x12 EDI string or contents of file descriptor.
@@ -37,7 +37,7 @@ def x12_validate(
             fd_997=nn7 if generate_997 else None,
             fd_html=html if generate_html else None,
             fd_xmldoc=xml if generate_xml else None,
-            map_path=None
+            map_path=None,
         )
 
     # Get string values
@@ -47,9 +47,9 @@ def x12_validate(
     xml_val = xml.getvalue()
 
     return {
-        'html': html_val,
-        '997': nn7_val,
-        'xml': xml_val,
-        'errors': stderr_val,
-        'ok': ok
+        "html": html_val,
+        "997": nn7_val,
+        "xml": xml_val,
+        "errors": stderr_val,
+        "ok": ok,
     }

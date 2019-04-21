@@ -5,7 +5,8 @@ from .edi_samples import invalid_edi, valid_edi
 
 
 def test_version():
-    assert __version__ == '0.1.0'
+    assert __version__ == "0.1.0"
+
 
 def test_valid_edi():
     result = x12_validate(
@@ -13,13 +14,14 @@ def test_valid_edi():
         params=None,
         generate_html=False,
         generate_997=False,
-        generate_xml=False
+        generate_xml=False,
     )
     assert result["ok"] is True
     assert result["html"] is ""
     assert result["997"] is ""
     assert result["xml"] is ""
     assert len(result["errors"]) is 0
+
 
 def test_valid_edi_outputs():
     result = x12_validate(
@@ -27,22 +29,19 @@ def test_valid_edi_outputs():
         params=None,
         generate_html=True,
         generate_997=True,
-        generate_xml=True
+        generate_xml=True,
     )
     assert result["ok"] is True
-    assert result["html"] is not  ""
+    assert result["html"] is not ""
     assert result["997"] is not ""
     assert result["xml"] is not ""
     assert len(result["errors"]) is 0
 
+
 def test_custom_file_descriptor():
     fd = StringIO(valid_edi)
     result = x12_validate(
-        src=fd,
-        params=None,
-        generate_html=False,
-        generate_997=False,
-        generate_xml=False
+        src=fd, params=None, generate_html=False, generate_997=False, generate_xml=False
     )
     assert result["ok"] is True
     assert result["html"] is ""
@@ -50,15 +49,16 @@ def test_custom_file_descriptor():
     assert result["xml"] is ""
     assert len(result["errors"]) is 0
 
+
 def test_invalid_edi():
     result = x12_validate(
         src=invalid_edi,
         params=None,
         generate_html=False,
         generate_997=False,
-        generate_xml=False
+        generate_xml=False,
     )
-    print('result', result)
+    print("result", result)
     assert result["ok"] is False
     assert result["html"] is ""
     assert result["997"] is ""
