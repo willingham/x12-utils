@@ -4,10 +4,6 @@ from io import StringIO
 from .edi_samples import invalid_edi, valid_edi
 
 
-def test_version():
-    assert __version__ == "0.1.0"
-
-
 def test_valid_edi():
     result = x12_validate(
         src=valid_edi,
