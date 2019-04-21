@@ -8,6 +8,11 @@ I've been writing Python packages to generate EDI for various organizations sinc
 
 Since there is another crucial step, validating the resulting EDI, I have also included the `x12_validator` module which is a lightweight wrapper around the great work done on [pyx12](https://github.com/azoner/pyx12) by @azoner.
 
+## Installation
+``` sh
+pip install x12-utils
+```
+
 ## Included Utilities
 ### Generator
 The `x12_generator` is a small helper for generating syntactically correct x12 EDI, however, does not assist in ensuring correct structure at all.
