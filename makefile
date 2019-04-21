@@ -14,6 +14,9 @@ lint:
 typecheck:
 	poetry run mypy x12_utils
 
+clean:
+	rm -rf dist
+
 build:
 	poetry build
 
