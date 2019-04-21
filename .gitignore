@@ -4,3 +4,4 @@
 __pycache__
 pip-wheel-metadata
 x12_utils.egg-info
+dist

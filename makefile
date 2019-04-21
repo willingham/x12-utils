@@ -6,7 +6,16 @@ test:
 	poetry run pytest
 
 format:
-	black x12_utils tests
+	poetry run black x12_utils tests
 
 lint:
-	black --check x12_utils tests
+	poetry run black --check x12_utils tests
+
+typecheck:
+	poetry run mypy x12_utils
+
+build:
+	poetry build
+
+publish:
+	poetry publish
