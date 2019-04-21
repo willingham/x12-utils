@@ -22,3 +22,11 @@ build:
 
 publish:
 	poetry publish
+	
+poetryversion:
+	poetry version $(version) 
+	
+version: poetryversion
+	$(eval NEW_VERS := $(shell cat pyproject.toml | grep "^version = \"*\"" | cut -d'"' -f2))
+	sed -i "" "s/__version__ = .*/__version__ = \"$(NEW_VERS)\"/g" x12_utils/__init__.py
+	
