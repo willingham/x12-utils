@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "x12-utils"
-version = "0.2.1"
+version = "0.3.0"
 description = "Lightweight utilities for working with x12 EDI"
 authors = ["willingham <thomas@tshows.us>"]
 repository = "https://github.com/willingham/x12-utils"
