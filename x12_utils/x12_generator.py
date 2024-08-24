@@ -26,10 +26,10 @@ def x12_generate(
 
         if cdr is None:
             continue
-        while len(cdr) is not 0 and cdr[-1] is "":
+        while len(cdr) != 0 and cdr[-1] is "":
             # Don't leave trailing element separators
             cdr = cdr[:-1]
-        if len(cdr) is 0:
+        if len(cdr) == 0:
             continue
 
         line = (
