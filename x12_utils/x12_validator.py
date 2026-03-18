@@ -36,7 +36,7 @@ def x12_validate(
     # The line of code defining the logger is at
     # https://github.com/azoner/pyx12/blob/2e3529e31a167a53ebcd9da348cece9f284b6710/pyx12/scripts/x12valid.py#L78
     logger_output: StringIO = StringIO()
-    pyx12_logger = logging.getLogger('pyx12')
+    pyx12_logger = logging.getLogger("pyx12")
     handler = logging.StreamHandler(logger_output)
     pyx12_logger.addHandler(handler)
     pyx12_logger.setLevel(logging.ERROR)

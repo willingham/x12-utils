@@ -26,7 +26,7 @@ def x12_generate(
 
         if cdr is None:
             continue
-        while len(cdr) != 0 and cdr[-1] is "":
+        while len(cdr) != 0 and cdr[-1] == "":
             # Don't leave trailing element separators
             cdr = cdr[:-1]
         if len(cdr) == 0:

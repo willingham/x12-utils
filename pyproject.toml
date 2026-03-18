@@ -1,22 +1,25 @@
-[tool.poetry]
+[project]
 name = "x12-utils"
 version = "0.3.0"
 description = "Lightweight utilities for working with x12 EDI"
-authors = ["willingham <thomas@tshows.us>"]
-repository = "https://github.com/willingham/x12-utils"
-homepage = "https://github.com/willingham/x12-utils"
+authors = [{name = "willingham", email = "thomas@tshows.us"}]
 license = "MIT"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "pyx12>=2.3.3,<3.0.0",
+    "setuptools>=80.10.2,<81.0.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.7"
-pyx12 = "^2.3"
+[project.urls]
+Homepage = "https://github.com/willingham/x12-utils"
+Repository = "https://github.com/willingham/x12-utils"
 
-[tool.poetry.dev-dependencies]
-pytest = "^3.0"
-mypy = "^0.701.0"
-pytest-cov = "^2.6"
-black = {version = "^18.3-alpha.0",allows-prereleases = true}
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+mypy = "^1.19.1"
+pytest-cov = "^7.0.0"
+black = "^26.3.1"
 
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core>=2.3.1,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
