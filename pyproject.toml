@@ -15,7 +15,7 @@ Homepage = "https://github.com/willingham/x12-utils"
 Repository = "https://github.com/willingham/x12-utils"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^9.0.2"
+pytest = "^9.0.3"
 mypy = "^1.19.1"
 pytest-cov = "^7.0.0"
 black = "^26.3.1"
